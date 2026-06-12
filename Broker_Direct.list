@@ -4,6 +4,22 @@
 #  基于 2026-06-12 真实抓包
 # ============================================================
 
+# ── 富途牛牛 / Moomoo (Futu) ──
+# 静态·本地化·更新域名
+DOMAIN,static.futunn.com
+DOMAIN,locale.futunn.com
+DOMAIN,update.futunn.com
+# 行情网关 IP 段（腾讯云大陆，无SNI裸连，直连低延迟）
+IP-CIDR,1.14.242.0/24,no-resolve
+IP-CIDR,101.33.192.0/24,no-resolve
+IP-CIDR,111.230.119.0/24,no-resolve
+IP-CIDR,118.89.98.0/24,no-resolve
+IP-CIDR,119.28.37.0/24,no-resolve
+IP-CIDR,121.5.97.0/24,no-resolve
+IP-CIDR,43.146.25.0/24,no-resolve     # static.futunn.com
+IP-CIDR,43.168.116.0/24,no-resolve    # locale.futunn.com
+IP-CIDR,81.71.131.0/24,no-resolve     # update.futunn.com
+
 # ── 老虎证券 Tiger ──
 DOMAIN,hq.skytigris.cn
 DOMAIN,hq2.skytigris.cn
