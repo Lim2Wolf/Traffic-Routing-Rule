@@ -17,10 +17,8 @@ DOMAIN-SUFFIX,futufin.com
 DOMAIN-SUFFIX,futusg.com
 DOMAIN-SUFFIX,futustatic.com
 DOMAIN-SUFFIX,moomoo.com
-DOMAIN,update.googleapis.com
 
 # 富途抓包中的行情、交易、账户及静态资源网段
-# 富途必要代理地址（来自 2026-06-12-220140.csv，明确保留）
 IP-CIDR,129.226.111.106/32,no-resolve
 IP-CIDR,170.106.62.232/32,no-resolve
 IP-CIDR,170.106.62.85/32,no-resolve
