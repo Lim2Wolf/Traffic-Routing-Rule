@@ -6,13 +6,37 @@
 # ------------------------------------------------------------
 # 1) 富途牛牛 / Moomoo (Futu)  — 沿用你原有抓包数据
 # ------------------------------------------------------------
-DOMAIN-SUFFIX,moomoo.com
-DOMAIN-SUFFIX,futu5.com
-DOMAIN-SUFFIX,futunn.com
-DOMAIN-SUFFIX,futuhk.com
-DOMAIN-SUFFIX,futuie.com
-DOMAIN-SUFFIX,futustatic.com
-# IP段见你原始清单（腾讯云，略）
+# ============================================================
+#  券商「交易 / 账户 / 入金 / 登录」→ 走代理
+#  挂到你的海外代理策略组（如 🇺🇸 US）
+#  基于 2026-06-12 真实抓包；顺序：精确DOMAIN 在 DOMAIN-SUFFIX 之上
+# ============================================================
+
+# ── 富途牛牛 / Moomoo (Futu) ──
+# 交易·资金·入金·登录域名
+DOMAIN,api.futunn.com
+DOMAIN,auth.futunn.com
+DOMAIN,funds.futuhn.com          # 入金
+DOMAIN,acctransfer.futuhn.com    # 转账
+DOMAIN,authfthk.futuhn.com
+DOMAIN,sdauth.futuhn.com
+DOMAIN-SUFFIX,moomoo.com         # authority.sg.moomoo.com 等账户域
+# 交易/账户网关 IP 段（腾讯云海外，无SNI裸连，需代理）
+IP-CIDR,43.129.255.0/24,no-resolve
+IP-CIDR,43.134.158.0/24,no-resolve
+IP-CIDR,43.153.191.0/24,no-resolve
+IP-CIDR,43.153.233.0/24,no-resolve
+IP-CIDR,43.163.63.0/24,no-resolve
+IP-CIDR,43.174.196.0/24,no-resolve   # funds/authority
+IP-CIDR,43.175.134.0/24,no-resolve   # api/auth/acctransfer
+IP-CIDR,49.51.78.0/24,no-resolve
+IP-CIDR,124.156.124.0/24,no-resolve
+IP-CIDR,129.226.79.0/24,no-resolve
+IP-CIDR,129.226.111.0/24,no-resolve
+IP-CIDR,170.106.47.0/24,no-resolve
+IP-CIDR,170.106.49.0/24,no-resolve
+IP-CIDR,170.106.62.0/24,no-resolve
+
 
 # ------------------------------------------------------------
 # 2) 长桥证券 Longbridge (HK/SG)
