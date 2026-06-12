@@ -102,14 +102,14 @@ IP-CIDR,155.102.54.0/24,no-resolve
 IP-CIDR,163.181.66.0/24,no-resolve
 
 # ==================== 盈立证券 uSMART（香港 / 新加坡） ====================
-DOMAIN-SUFFIX,usmart.hk
-DOMAIN-SUFFIX,usmart.sg
-DOMAIN-SUFFIX,usmartglobal.com
-DOMAIN-SUFFIX,usmartsecurities.com
-DOMAIN-SUFFIX,usmart66.com
-DOMAIN-SUFFIX,yxzq.com
-DOMAIN,hq-news-server-1257884527.cos.ap-guangzhou.myqcloud.com
-DOMAIN,hq-prod-news-server-1257884527.cos.ap-chengdu.myqcloud.com
+# DOMAIN-SUFFIX,usmart.hk
+# DOMAIN-SUFFIX,usmart.sg
+# DOMAIN-SUFFIX,usmartglobal.com
+# DOMAIN-SUFFIX,usmartsecurities.com
+# DOMAIN-SUFFIX,usmart66.com
+# DOMAIN-SUFFIX,yxzq.com
+# DOMAIN,hq-news-server-1257884527.cos.ap-guangzhou.myqcloud.com
+# DOMAIN,hq-prod-news-server-1257884527.cos.ap-chengdu.myqcloud.com
 
 # ==================== 老虎证券 Tiger Brokers ====================
 DOMAIN-SUFFIX,itiger.com
