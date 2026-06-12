@@ -17,13 +17,17 @@ DOMAIN-SUFFIX,futufin.com
 DOMAIN-SUFFIX,futusg.com
 DOMAIN-SUFFIX,futustatic.com
 DOMAIN-SUFFIX,moomoo.com
+DOMAIN,update.googleapis.com
 
 # 富途抓包中的行情、交易、账户及静态资源网段
 # 注意：抓包中的 119.28.183/206/229/230:123 是 Port Map/时间同步，
 # 成功入金时均为 DIRECT，不属于券商业务代理范围，因此不收录。
 IP-CIDR,1.14.242.0/24,no-resolve
+IP-CIDR,43.128.254.0/24,no-resolve
 IP-CIDR,43.129.255.0/24,no-resolve
+IP-CIDR,43.132.106.0/24,no-resolve
 IP-CIDR,43.134.158.0/24,no-resolve
+IP-CIDR,43.135.106.0/24,no-resolve
 IP-CIDR,43.146.25.0/24,no-resolve
 IP-CIDR,43.153.191.0/24,no-resolve
 IP-CIDR,43.153.233.0/24,no-resolve
