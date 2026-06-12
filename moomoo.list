@@ -4,13 +4,13 @@
 
 # ------------------------------------------------------------
 # ==================== 富途牛牛 / Moomoo ====================
-DOMAIN,api.futunn.com
-DOMAIN,auth.futunn.com
-DOMAIN,funds.futuhn.com
-DOMAIN,acctransfer.futuhn.com
-DOMAIN,authfthk.futuhn.com
-DOMAIN,sdauth.futuhn.com
-DOMAIN,authority.sg.moomoo.com
+# DOMAIN,api.futunn.com
+# DOMAIN,auth.futunn.com
+# DOMAIN,funds.futuhn.com
+# DOMAIN,acctransfer.futuhn.com
+# DOMAIN,authfthk.futuhn.com
+# DOMAIN,sdauth.futuhn.com
+# DOMAIN,authority.sg.moomoo.com
 DOMAIN-SUFFIX,futunn.com
 DOMAIN-SUFFIX,futuhn.com
 DOMAIN-SUFFIX,futufin.com
