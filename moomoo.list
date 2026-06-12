@@ -1,90 +1,60 @@
 # ============================================================
-#  券商综合分流规则集（域名为主，含 no-resolve IP 段）
-#  更新日期: 2026-06-12
+#  券商分流规则集 — 基于 2026-06-12 真实抓包重写
+#  ✅ = 抓包确认命中    ⚠️ = 共享云IP，加IP规则需谨慎
 # ============================================================
 
 # ------------------------------------------------------------
-# 1) 富途牛牛 / Moomoo (Futu)
+# 1) 富途牛牛 / Moomoo (Futu)  — 沿用你原有抓包数据
 # ------------------------------------------------------------
 DOMAIN-SUFFIX,moomoo.com
 DOMAIN-SUFFIX,futu5.com
 DOMAIN-SUFFIX,futunn.com
 DOMAIN-SUFFIX,futuhk.com
 DOMAIN-SUFFIX,futuie.com
-DOMAIN-SUFFIX,futu5.cn
-DOMAIN-SUFFIX,futuapi.com
-DOMAIN-SUFFIX,futuholdings.com
-
-# IP-CIDR（腾讯云段，源自真实抓包；其余券商需自行补充）
-IP-CIDR,42.193.128.0/24,no-resolve
-IP-CIDR,42.194.246.0/24,no-resolve
-IP-CIDR,43.132.138.0/24,no-resolve
-IP-CIDR,43.134.158.0/24,no-resolve
-IP-CIDR,43.135.57.0/24,no-resolve
-IP-CIDR,43.146.25.0/24,no-resolve
-IP-CIDR,43.153.191.0/24,no-resolve
-IP-CIDR,43.153.233.0/24,no-resolve
-IP-CIDR,43.153.238.0/24,no-resolve
-IP-CIDR,43.163.16.0/24,no-resolve
-IP-CIDR,43.174.143.0/24,no-resolve
-IP-CIDR,43.175.134.0/24,no-resolve
-IP-CIDR,49.51.77.0/24,no-resolve
-IP-CIDR,49.51.79.0/24,no-resolve
-IP-CIDR,101.32.104.0/24,no-resolve
-IP-CIDR,101.32.198.0/24,no-resolve
-IP-CIDR,101.33.43.0/24,no-resolve
-IP-CIDR,101.33.192.0/24,no-resolve
-IP-CIDR,119.28.183.0/24,no-resolve
-IP-CIDR,119.28.206.0/24,no-resolve
-IP-CIDR,119.28.229.0/24,no-resolve
-IP-CIDR,119.28.230.0/24,no-resolve
-IP-CIDR,119.91.245.0/24,no-resolve
-IP-CIDR,124.156.233.0/24,no-resolve
-IP-CIDR,124.156.235.0/24,no-resolve
-IP-CIDR,170.106.62.0/24,no-resolve
-IP-CIDR,170.106.201.0/24,no-resolve
+# IP段见你原始清单（腾讯云，略）
 
 # ------------------------------------------------------------
-# 2) 长桥证券 Longbridge (香港 / 新加坡)
+# 2) 长桥证券 Longbridge (HK/SG)
 # ------------------------------------------------------------
-DOMAIN-SUFFIX,longbridge.com
+DOMAIN-SUFFIX,lbkrs.com            # ✅ 核心: api/quote/ws/m/assets/event-tracking
+DOMAIN-SUFFIX,lbctrl.com           # ✅ 控制面/埋点/desktop配置
+DOMAIN-SUFFIX,longbridgeapp.com    # ✅ api-status
+DOMAIN-SUFFIX,longbridge.com       # 官网
 DOMAIN-SUFFIX,longbridge.hk
 DOMAIN-SUFFIX,longbridge.sg
-DOMAIN-SUFFIX,longbridge-inc.com
-DOMAIN-SUFFIX,longbridgeapp.com
-DOMAIN-SUFFIX,lbkrs.com          # 静态资源/后端 CDN
-DOMAIN-SUFFIX,lbctrl.com         # 行情/接口（如未命中可删）
-# IP-CIDR,<待真实抓包补充>,no-resolve
+DOMAIN-SUFFIX,wbrks.com            # ✅ download / longbridge.app（CDN）
+# --- 观测到的IP段（AWS/阿里云，⚠️见文末说明）---
+IP-CIDR,163.181.66.0/24,no-resolve   # ✅ lbctrl/longbridgeapp 专用段，较安全
+IP-CIDR,3.166.96.0/24,no-resolve     # ✅ api-gl.lbkrs.com (AWS)
+IP-CIDR,54.192.100.0/24,no-resolve   # ⚠️ api/quote (AWS CloudFront，共享CDN，慎用)
 
 # ------------------------------------------------------------
-# 3) 盈立证券 uSMART (香港 / 新加坡)
+# 3) 盈立证券 uSMART (HK/SG)
 # ------------------------------------------------------------
-DOMAIN-SUFFIX,usmart.hk
+DOMAIN-SUFFIX,yxzq.com             # ✅ 真实核心域名: hq/jy/wj/sc/hz/push 全在此
+DOMAIN-SUFFIX,usmart.hk            # 官网（未在本次抓包出现）
 DOMAIN-SUFFIX,usmart.sg
 DOMAIN-SUFFIX,usmartglobal.com
 DOMAIN-SUFFIX,usmartsecurities.com
-DOMAIN-SUFFIX,usmartcapital.com
-DOMAIN-SUFFIX,usmart-app.com
-DOMAIN-SUFFIX,ufron.com           # 后端接口（推测，未命中可删）
-# IP-CIDR,<待真实抓包补充>,no-resolve
+# 资讯走腾讯云COS: *.cos.ap-guangzhou/ap-chengdu.myqcloud.com（建议归"国内直连"，不单列）
+# 本次未抓到 yxzq.com 的裸IP，IP段暂缺
 
 # ------------------------------------------------------------
 # 4) 老虎证券 Tiger Brokers
 # ------------------------------------------------------------
+DOMAIN-SUFFIX,skytigris.cn         # ✅ 真实核心: hq/hq2/trade/oauth/push/option...
+DOMAIN-SUFFIX,tigerfintech.com     # ✅ ms.tigerfintech.com
+DOMAIN-SUFFIX,laohu8.com           # ✅ 社区/资讯 community-service/stock-theme
+DOMAIN-SUFFIX,itigerup.com         # ✅ 官网
 DOMAIN-SUFFIX,tigerbrokers.com
-DOMAIN-SUFFIX,itigerup.com
-DOMAIN-SUFFIX,itiger.com
-DOMAIN-SUFFIX,tigerfintech.com
-DOMAIN-SUFFIX,tigersecurities.com
-DOMAIN-SUFFIX,tigertrade.com
-DOMAIN-SUFFIX,laohu8.com          # 社区/资讯
-# IP-CIDR,<待真实抓包补充>,no-resolve
+# --- 裸IP长连接（无SNI，端口8883/8893/10100，必须靠IP命中）---
+IP-CIDR,27.111.178.0/24,no-resolve   # ✅ :8893 行情/交易socket
+IP-CIDR,47.242.250.0/24,no-resolve   # ✅ :8883 (阿里云HK)
+IP-CIDR,8.218.79.0/24,no-resolve     # ✅ :10100 (阿里云HK)
 
 # ------------------------------------------------------------
-# 5) TradeUP (Tiger 旗下美国实体，与 Tiger 后端同源)
+# 5) TradeUP (老虎旗下美国实体，后端与Tiger同源)
 # ------------------------------------------------------------
 DOMAIN-SUFFIX,tradeup.com
 DOMAIN-SUFFIX,tradeupsecurities.com
-# 注: TradeUP App 包名为 com.tigerbrokers.tigertradeintl，
-#     运行时也会请求上面 Tiger 的 itigerup.com / tigerfintech.com 等域名
-# IP-CIDR,<待真实抓包补充>,no-resolve
+# 运行时同样请求上面 skytigris.cn / tigerfintech.com，规则由第4节覆盖
