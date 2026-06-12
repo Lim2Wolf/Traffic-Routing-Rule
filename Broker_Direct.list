@@ -1,0 +1,36 @@
+# ============================================================
+#  券商「行情 / 数据 / 推送 / 静态」→ 直连
+#  挂到你的 DIRECT 策略组
+#  基于 2026-06-12 真实抓包
+# ============================================================
+
+# ── 老虎证券 Tiger ──
+DOMAIN,hq.skytigris.cn
+DOMAIN,hq2.skytigris.cn
+DOMAIN,hq-depth.skytigris.cn
+DOMAIN,hq-perm.skytigris.cn
+DOMAIN,push.skytigris.cn
+DOMAIN,geo.skytigris.cn
+DOMAIN,tesseract.skytigris.cn
+DOMAIN,mnt-report.skytigris.cn
+DOMAIN-SUFFIX,laohu8.com
+DOMAIN-SUFFIX,itigerup.com
+IP-CIDR,47.242.250.0/24,no-resolve
+IP-CIDR,8.218.79.0/24,no-resolve
+
+# ── 盈立证券 uSMART ──
+DOMAIN,hq.yxzq.com
+DOMAIN,hq-wss.yxzq.com
+DOMAIN,hz.yxzq.com
+DOMAIN,hz-wss.yxzq.com
+DOMAIN,sc.yxzq.com
+DOMAIN-SUFFIX,yxzq.com
+
+# ── 长桥证券 Longbridge ──
+DOMAIN,quote-gl.lbkrs.com
+DOMAIN,ws-gl.lbkrs.com
+DOMAIN,assets.lbkrs.com
+DOMAIN,m.lbkrs.com
+DOMAIN,event-tracking.lbkrs.com
+DOMAIN,performance-data.lbkrs.com
+DOMAIN-SUFFIX,wbrks.com

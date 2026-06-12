@@ -1,0 +1,29 @@
+# ============================================================
+#  券商「交易 / 账户 / 入金 / 登录」→ 走代理
+#  挂到你的海外代理策略组（如 🇺🇸 US）
+#  基于 2026-06-12 真实抓包；顺序：精确DOMAIN 在 DOMAIN-SUFFIX 之上
+# ============================================================
+
+# ── 老虎证券 Tiger / TradeUP ──
+DOMAIN,trade.skytigris.cn
+DOMAIN,account.skytigris.cn
+DOMAIN,oauth1.skytigris.cn
+DOMAIN,customer.skytigris.cn
+DOMAIN,option1.skytigris.cn
+DOMAIN,api2.skytigris.cn
+DOMAIN,bff-mobile.skytigris.cn
+DOMAIN-SUFFIX,tigerfintech.com
+DOMAIN-SUFFIX,tradeup.com
+DOMAIN-SUFFIX,tradeupsecurities.com
+IP-CIDR,27.111.178.0/24,no-resolve
+
+# ── 盈立证券 uSMART ──
+DOMAIN,jy.yxzq.com
+DOMAIN,wj.yxzq.com
+
+# ── 长桥证券 Longbridge ──
+DOMAIN,api-gl.lbkrs.com
+DOMAIN,api.lbkrs.com
+DOMAIN,api-status.longbridgeapp.com
+DOMAIN-SUFFIX,lbctrl.com
+DOMAIN-SUFFIX,lbkrs.com
