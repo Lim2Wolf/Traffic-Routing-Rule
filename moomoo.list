@@ -19,16 +19,14 @@ DOMAIN-SUFFIX,futustatic.com
 DOMAIN-SUFFIX,moomoo.com
 
 # 富途抓包中的行情、交易、账户及静态资源网段
-IP-CIDR,129.226.111.106/32,no-resolve
-IP-CIDR,170.106.62.232/32,no-resolve
-IP-CIDR,170.106.62.85/32,no-resolve
-IP-CIDR,43.128.254.50/32,no-resolve
-IP-CIDR,43.132.106.6/32,no-resolve
-IP-CIDR,43.134.158.106/32,no-resolve
-IP-CIDR,43.135.106.106/32,no-resolve
-IP-CIDR,43.153.191.15/32,no-resolve
-IP-CIDR,43.175.134.104/32,no-resolve
-IP-CIDR,43.175.79.128/32,no-resolve
+IP-CIDR,42.193.128.0/24,no-resolve
+IP-CIDR,42.194.246.0/24,no-resolve
+IP-CIDR,43.132.138.0/24,no-resolve
+IP-CIDR,119.91.245.0/24,no-resolve
+IP-CIDR,124.156.233.0/24,no-resolve
+IP-CIDR,124.156.235.0/24,no-resolve
+IP-CIDR,170.106.62.0/24,no-resolve
+IP-CIDR,170.106.201.0/24,no-resolve
 
 # ==================== 长桥证券（香港 / 新加坡） ====================
 DOMAIN-SUFFIX,longbridge.com
