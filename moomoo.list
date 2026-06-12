@@ -1,13 +1,21 @@
-# > Moomoo (富途) 综合分流规则集 (包含 no-resolve)
+# ============================================================
+#  券商综合分流规则集（域名为主，含 no-resolve IP 段）
+#  更新日期: 2026-06-12
+# ============================================================
 
-# 域名后缀匹配 (Domain Suffix)
+# ------------------------------------------------------------
+# 1) 富途牛牛 / Moomoo (Futu)
+# ------------------------------------------------------------
 DOMAIN-SUFFIX,moomoo.com
 DOMAIN-SUFFIX,futu5.com
 DOMAIN-SUFFIX,futunn.com
 DOMAIN-SUFFIX,futuhk.com
 DOMAIN-SUFFIX,futuie.com
+DOMAIN-SUFFIX,futu5.cn
+DOMAIN-SUFFIX,futuapi.com
+DOMAIN-SUFFIX,futuholdings.com
 
-# IP子网网段匹配 (IP-CIDR)
+# IP-CIDR（腾讯云段，源自真实抓包；其余券商需自行补充）
 IP-CIDR,42.193.128.0/24,no-resolve
 IP-CIDR,42.194.246.0/24,no-resolve
 IP-CIDR,43.132.138.0/24,no-resolve
@@ -35,3 +43,48 @@ IP-CIDR,124.156.233.0/24,no-resolve
 IP-CIDR,124.156.235.0/24,no-resolve
 IP-CIDR,170.106.62.0/24,no-resolve
 IP-CIDR,170.106.201.0/24,no-resolve
+
+# ------------------------------------------------------------
+# 2) 长桥证券 Longbridge (香港 / 新加坡)
+# ------------------------------------------------------------
+DOMAIN-SUFFIX,longbridge.com
+DOMAIN-SUFFIX,longbridge.hk
+DOMAIN-SUFFIX,longbridge.sg
+DOMAIN-SUFFIX,longbridge-inc.com
+DOMAIN-SUFFIX,longbridgeapp.com
+DOMAIN-SUFFIX,lbkrs.com          # 静态资源/后端 CDN
+DOMAIN-SUFFIX,lbctrl.com         # 行情/接口（如未命中可删）
+# IP-CIDR,<待真实抓包补充>,no-resolve
+
+# ------------------------------------------------------------
+# 3) 盈立证券 uSMART (香港 / 新加坡)
+# ------------------------------------------------------------
+DOMAIN-SUFFIX,usmart.hk
+DOMAIN-SUFFIX,usmart.sg
+DOMAIN-SUFFIX,usmartglobal.com
+DOMAIN-SUFFIX,usmartsecurities.com
+DOMAIN-SUFFIX,usmartcapital.com
+DOMAIN-SUFFIX,usmart-app.com
+DOMAIN-SUFFIX,ufron.com           # 后端接口（推测，未命中可删）
+# IP-CIDR,<待真实抓包补充>,no-resolve
+
+# ------------------------------------------------------------
+# 4) 老虎证券 Tiger Brokers
+# ------------------------------------------------------------
+DOMAIN-SUFFIX,tigerbrokers.com
+DOMAIN-SUFFIX,itigerup.com
+DOMAIN-SUFFIX,itiger.com
+DOMAIN-SUFFIX,tigerfintech.com
+DOMAIN-SUFFIX,tigersecurities.com
+DOMAIN-SUFFIX,tigertrade.com
+DOMAIN-SUFFIX,laohu8.com          # 社区/资讯
+# IP-CIDR,<待真实抓包补充>,no-resolve
+
+# ------------------------------------------------------------
+# 5) TradeUP (Tiger 旗下美国实体，与 Tiger 后端同源)
+# ------------------------------------------------------------
+DOMAIN-SUFFIX,tradeup.com
+DOMAIN-SUFFIX,tradeupsecurities.com
+# 注: TradeUP App 包名为 com.tigerbrokers.tigertradeintl，
+#     运行时也会请求上面 Tiger 的 itigerup.com / tigerfintech.com 等域名
+# IP-CIDR,<待真实抓包补充>,no-resolve
