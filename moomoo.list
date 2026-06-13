@@ -125,5 +125,5 @@ IP-CIDR,27.111.178.0/24,no-resolve
 IP-CIDR,47.242.250.0/24,no-resolve
 
 # ==================== TradeUP ====================
-# 本次四份抓包中没有 TradeUP 进程记录，以下为官网主域名兜底。
+# TradeUP
 DOMAIN-SUFFIX,tradeup.com
