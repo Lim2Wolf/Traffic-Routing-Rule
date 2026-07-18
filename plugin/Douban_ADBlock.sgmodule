@@ -1,0 +1,22 @@
+#!name=🚫 豆瓣 App 去广告
+#!desc=移除豆瓣 App 开屏广告、信息流广告、电影广告、首页横幅、商城推广及搜索推荐词
+#!category=🚫 AD Block
+#!author=Codex
+
+[URL Rewrite]
+# > 开屏广告
+^https:\/\/api\.douban\.com\/v\d\/app_ads\/splash - reject-dict
+
+# > 信息流与电影广告
+^https:\/\/frodo\.douban\.com\/api\/v\d\/erebor\/feed_ad - reject-dict
+^https:\/\/frodo\.douban\.com\/api\/v\d\/movie\/ad - reject-dict
+
+# > 首页横幅与搜索推荐
+^https:\/\/frodo\.douban\.com\/api\/v\d\/home_banner - reject-dict
+^https:\/\/frodo\.douban\.com\/api\/v\d\/search\/found_words - reject-dict
+
+# > 豆瓣商城推广
+^https:\/\/m\.douban\.com\/rexxar\/api\/v\d\/market\/products\/ - reject-dict
+
+[MITM]
+hostname = %APPEND% api.douban.com, frodo.douban.com, m.douban.com
