@@ -12,7 +12,7 @@
 ^https:\/\/frodo\.douban\.com\/api\/v\d\/movie\/ad - reject-dict
 
 # > 首页横幅与搜索推荐
-^https:\/\/frodo\.douban\.com\/api\/v\d\/home_banner - reject-dict
+#^https:\/\/frodo\.douban\.com\/api\/v\d\/home_banner - reject-dict
 ^https:\/\/frodo\.douban\.com\/api\/v\d\/search\/found_words - reject-dict
 
 # > 豆瓣商城推广
