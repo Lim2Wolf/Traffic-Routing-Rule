@@ -1,0 +1,18 @@
+#!name=🚫 航旅纵横去广告
+#!desc=移除航旅纵横首页广告，并拦截启动页及推广接口
+#!category=🚫 AD Block
+#!author=Codex
+
+[Rule]
+# > 拦截启动与推广接口
+URL-REGEX,^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native,REJECT
+
+[Script]
+# > 移除首页广告
+航旅纵横_移除首页广告 = type=http-response, pattern=^https?:\/\/(114\.115\.217\.129|home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, script-path=https://kelee.one/Resource/JavaScript/Umetrip/Umetrip_remove_ads.js, requires-body=true, max-size=-1, timeout=20
+
+# > 根据 rpid 屏蔽指定推广请求
+航旅纵横_屏蔽推广请求 = type=http-request, pattern=^https?:\/\/(114\.115\.217\.129|home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, script-path=Umetrip_reject_promotion.js, timeout=20
+
+[MITM]
+hostname = %APPEND% 114.115.217.129, home.umetrip.com
